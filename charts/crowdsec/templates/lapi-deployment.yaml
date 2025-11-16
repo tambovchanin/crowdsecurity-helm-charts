@@ -265,6 +265,9 @@ spec:
         persistentVolumeClaim:
           {{ if .Values.lapi.persistentVolume.config.existingClaim }}
           claimName: {{ .Values.lapi.persistentVolume.config.existingClaim }}
+          {{ if .Values.lapi.persistentVolume.config.subPath }}
+          subPath: {{ .Values.lapi.persistentVolume.config.subPath }}
+          {{ end }}
           {{ else }}
           claimName: {{ .Release.Name }}-config-pvc
           {{ end }}
