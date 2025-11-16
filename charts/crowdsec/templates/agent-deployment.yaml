@@ -267,6 +267,9 @@ spec:
         persistentVolumeClaim:
           {{ if .Values.agent.persistentVolume.config.existingClaim }}
           claimName: {{ .Values.agent.persistentVolume.config.existingClaim }}
+          {{ if .Values.agent.persistentVolume.config.subPath }}
+          subPath: {{ .Values.agent.persistentVolume.config.subPath }}
+          {{ end }}
           {{ else }}
           claimName: {{ .Release.Name }}-agent-config-pvc
           {{ end }}
