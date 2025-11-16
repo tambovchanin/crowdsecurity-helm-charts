@@ -187,6 +187,9 @@ spec:
           {{- $crowdsecConfig = "/etc/crowdsec_data" }}
           - name: crowdsec-agent-config
             mountPath: {{ $crowdsecConfig }}
+            {{ if .Values.agent.persistentVolume.config.subPath }}
+            subPath: {{ .Values.agent.persistentVolume.config.subPath }}
+            {{ end }}
           {{- end }}
           {{ if index .Values.config "simulation.yaml" }}
           - name: crowdsec-simulation-volume
