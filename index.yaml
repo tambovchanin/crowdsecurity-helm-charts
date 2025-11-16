@@ -1,0 +1,39 @@
+apiVersion: v1
+entries:
+  crowdsec:
+  - apiVersion: v2
+    appVersion: v1.7.0
+    created: "2025-11-16T10:16:17.385553244Z"
+    description: Crowdsec helm chart is an open-source, lightweight agent to detect
+      and respond to bad behaviours.
+    digest: c144b3f67c3a940f0552ec05c8f6efd27749335de081cec8fb32314e09c3e761
+    name: crowdsec
+    type: application
+    urls:
+    - https://github.com/tambovchanin/crowdsecurity-helm-charts/releases/download/crowdsec-0.20.1/crowdsec-0.20.1.tgz
+    version: 0.20.1
+  crowdsec-traefik-bouncer:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2025-11-16T10:16:17.607867892Z"
+    deprecated: true
+    description: A http service to verify request and bounce them according to decisions
+      made by CrowdSec.
+    digest: 9af3ebf9c87dedbc14a80eef9685f6ef3c1b12b49b4847929964745a80ec289d
+    name: crowdsec-traefik-bouncer
+    type: application
+    urls:
+    - https://github.com/tambovchanin/crowdsecurity-helm-charts/releases/download/crowdsec-traefik-bouncer-0.1.4/crowdsec-traefik-bouncer-0.1.4.tgz
+    version: 0.1.4
+  helloworld:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-11-16T10:16:17.839220463Z"
+    description: A helloWorld chart for Kubernetes using ingress nginx
+    digest: c5b58338ebfbcb507333223da6b7d9cc450cd14a12140b391b2d6423567cf582
+    name: helloworld
+    type: application
+    urls:
+    - https://github.com/tambovchanin/crowdsecurity-helm-charts/releases/download/helloworld-0.2.1/helloworld-0.2.1.tgz
+    version: 0.2.1
+generated: "2025-11-16T10:16:17.839223969Z"
