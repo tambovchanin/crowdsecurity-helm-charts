@@ -204,6 +204,9 @@ spec:
           {{- $crowdsecConfig = "/etc/crowdsec_data" -}}
           - name: crowdsec-config
             mountPath: {{ $crowdsecConfig }}
+            {{ if .Values.lapi.persistentVolume.config.subPath }}
+            subPath: {{ .Values.lapi.persistentVolume.config.subPath }}
+            {{ end }}
           {{- end }}
           {{ if index .Values.config "profiles.yaml" }}
           - name: crowdsec-profiles-volume
